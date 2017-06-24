@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ABase/Abase.iml" filepath="$PROJECT_DIR$/ABase/Abase.iml" />
       <module fileurl="file://$PROJECT_DIR$/ATest/ATest.iml" filepath="$PROJECT_DIR$/ATest/ATest.iml" />
       <module fileurl="file://$PROJECT_DIR$/CrosheAndroidBase.iml" filepath="$PROJECT_DIR$/CrosheAndroidBase.iml" />
     </modules>
