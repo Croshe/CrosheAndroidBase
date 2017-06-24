@@ -1,1 +1,1 @@
-include ':ATest', ':ABase'
+include ':ABase', ':TestApp', ':BaseMap'

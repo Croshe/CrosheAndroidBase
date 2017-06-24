@@ -9,9 +9,8 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
@@ -19,16 +18,62 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dexOptions {
+        jumboMode true
+    }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
-
+    compile 'com.android.support:preference-v7:25.3.1'
+    compile 'com.android.support:preference-v14:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar'
     compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.alibaba:fastjson:1.2.12'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.romandanylyk:pageindicatorview:0.1.2@aar'
+    compile 'com.isseiaoki:simplecropview:1.1.4'
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile files('libs/jpinyin-1.1.6.jar')
+
+
+}
+
+
+/** 以下开始是将Android Library上传到jcenter的相关配置**/
+apply plugin: 'com.novoda.bintray-release'//添加
+//项目主页
+def siteUrl = 'https://github.com/Croshe/CrosheAndroidBase.git'
+publish{
+    repoName = 'CAndroidBase'//远程仓库名字
+    userOrg = 'janesen'//bintray.com的用户名
+    groupId = 'com.croshe.android'//jcenter上的路径
+    artifactId = 'ABase'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = '安徽创息软件科技有限公司'//描述，不重要
+    website = siteUrl//项目主页
+}
+tasks.withType(Javadoc) {//防止编码问题
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
 }

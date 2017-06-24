@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ABase/Abase.iml" filepath="$PROJECT_DIR$/ABase/Abase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ATest/ATest.iml" filepath="$PROJECT_DIR$/ATest/ATest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseMap/BaseMap.iml" filepath="$PROJECT_DIR$/BaseMap/BaseMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/CrosheAndroidBase.iml" filepath="$PROJECT_DIR$/CrosheAndroidBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestApp/TestApp.iml" filepath="$PROJECT_DIR$/TestApp/TestApp.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+             android:layout_width = "match_parent"
+             android:layout_height = "match_parent"
+             android:background = "#000"
+             android:clickable = "true" >
+
+    <com.croshe.android.base.views.control.CrosheViewPager
+        android:id = "@+id/viewPager"
+        android:background = "#000"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent" >
+    </com.croshe.android.base.views.control.CrosheViewPager >
+
+
+    <LinearLayout android:layout_width = "wrap_content"
+                  android:layout_height = "wrap_content"
+                  android:orientation = "vertical" >
+        <View android:layout_width = "0dp"
+              android:id="@+id/viewHolder"
+              android:layout_height = "25dp" />
+        <LinearLayout
+            android:id = "@+id/llBack"
+            android:layout_width = "55dp"
+            android:layout_height = "55dp"
+            android:background = "?actionBarItemBackground"
+            android:gravity = "center"
+            android:onClick = "onClickByBase"
+            android:orientation = "vertical"
+        >
+            <ImageView
+                android:layout_width = "25dp"
+                android:layout_height = "25dp"
+                android:src = "@drawable/ic_back" />
+
+        </LinearLayout >
+    </LinearLayout >
+
+
+    <TextView
+        android:id = "@+id/tvNumber"
+        android:layout_width = "match_parent"
+        android:layout_height = "55dp"
+        android:layout_gravity = "bottom"
+        android:gravity = "center"
+        android:padding = "10dp"
+        android:text = "0/0"
+        android:textColor = "#fff" />
+</FrameLayout >
